@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Natalie Riolfi</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css"/>
+
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css"/>
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.ico' %}" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex flex-column justify-content-center">
+
+    <nav class="nav-menu">
+      <ul>
+        <li class="active"><a href="#hero"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li><a href="#portfolio"><i class="bx bx-carousel"></i> <span>Portfolio</span></a></li>
+        <li><a href="#sketchbook"><i class="bx bx-book-open"></i> <span>Sketchbook Tour</span></a></li>
+        <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
+        <li><a href="#contact"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center">
+    <div class="container introbox" data-aos="zoom-in" data-aos-delay="100">
+      <h1>Natalie Riolfi</h1>
+      <p><span class="typed" data-typed-items="Artist, Cartoonist, Painter"></span></p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/mavrxia/" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="mailto:mavrxia@gmail.com" class="linkedin"><i class="bx bx-envelope"></i></a>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-painting">Painting</li>
+              <li data-filter=".filter-woodcarving">Wood Carving</li>
+              <li data-filter=".filter-sketch">Sketch</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sketch">
+            <div class="portfolio-wrap">
+              <img src="{% static 'assets/img/portfolio/IMG-3663.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/portfolio/IMG-3663.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-painting">
+            <div class="portfolio-wrap">
+              <img src="{% static 'assets/img/portfolio/In_a_Week.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/portfolio/In_a_Week.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-woodcarving">
+            <div class="portfolio-wrap">
+              <img src="{% static 'assets/img/portfolio/Wood_Carving_Series.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/portfolio/Wood_Carving_Series.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-woodcarving">
+            <div class="portfolio-wrap">
+              <img src="{% static 'assets/img/portfolio/wood_environment_no.1.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/portfolio/wood_environment_no.1.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-woodcarving">
+            <div class="portfolio-wrap">
+              <img src="{% static 'assets/img/portfolio/wood_environment_no.2.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/portfolio/wood_environment_no.2.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-painting">
+            <div class="portfolio-wrap">
+              <img src="{% static 'assets/img/portfolio/Edge_of_the_World_at_Salar_de_Uyuni.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/portfolio/Edge_of_the_World_at_Salar_de_Uyuni.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-painting">
+            <div class="portfolio-wrap">
+              <img src="{% static 'assets/img/portfolio/IMG-3664.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/portfolio/IMG-3664.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sketch">
+            <div class="portfolio-wrap">
+              <img src="{% static 'assets/img/portfolio/IMG-4087.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/portfolio/IMG-4087.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sketch">
+            <div class="portfolio-wrap">
+              <img src="{% static 'assets/img/portfolio/IMG-4088.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/portfolio/IMG-4088.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sketch">
+            <div class="portfolio-wrap">
+              <img src="{% static 'assets/img/portfolio/IMG-4089.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/portfolio/IMG-4089.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sketch">
+            <div class="portfolio-wrap">
+              <img src="{% static 'assets/img/portfolio/IMG-4091.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/portfolio/IMG-4091.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sketch">
+            <div class="portfolio-wrap">
+              <img src="{% static 'assets/img/portfolio/IMG-4093.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/portfolio/IMG-4093.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sketch">
+            <div class="portfolio-wrap">
+              <img src="{% static 'assets/img/portfolio/IMG-4102.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/portfolio/IMG-4102.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <section id="sketchbook" class="sketchbook">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Sketchbook Tour</h2>
+        </div>
+        <div class="main">
+          <div class="slider slider-for">
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4050.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4056.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4060.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4061.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4063.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4046.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4047.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4048.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4080.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4083.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4084.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4085.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4086.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4087.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4088.jpg' %}"></img></div>
+          </div>
+          <div class="slider slider-nav">
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4050.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4056.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4060.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4061.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4063.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4046.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4047.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4048.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4080.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4083.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4084.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4085.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4086.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4087.jpg' %}"></img></div>
+            <div><img src="{% static 'assets/img/sketchbook/IMG-4088.jpg' %}"></img></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About</h2>
+          <p>Natalie Riolfi is an aspiring cartoonist, storyboard artist, and writer. Currently, she is a Cartooning major at School of Visual Arts in New York City and artist for The Anime Village in Orlando, FL.</p>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+        </div>
+
+        <div class="contact-links">
+          <div class="logo">
+            <a href="https://www.instagram.com/mavrxia/" src="{% static 'assets/img/insta.svg' %}"><h4>Instagram</h4><img src="{% static 'assets/img/insta.svg' %}"></a>
+          </div>
+
+          <div class="logo">
+            <a href="mailto:mavrxia@gmail.com" src="{% static 'assets/img/email.svg' %}"><h4>Email</h4><img src="{% static 'assets/img/email.svg' %}"></a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Natalie Riolfi</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/typed.js/typed.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+
+</body>
+
+</html>
+
+<script>
+  if ($(window).width() <= 768) {
+    var $jq = jQuery.noConflict();
+    $jq('.slider-for').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.slider-nav'
+    });
+
+    $jq('.slider-nav').slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      asNavFor: '.slider-for',
+      arrows: false,
+      dots: true,
+      focusOnSelect: true
+    });
+
+    $jq('a[data-slide]').click(function(e) {
+      e.preventDefault();
+      var slideno = $jq(this).data('slide');
+      $jq('.slider-nav').slick('slickGoTo', slideno - 1);
+    });
+  }
+
+  else if ($(window).width() <= 992) {
+    var $jq = jQuery.noConflict();
+    $jq('.slider-for').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.slider-nav'
+    });
+
+    $jq('.slider-nav').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      asNavFor: '.slider-for',
+      arrows: false,
+      dots: true,
+      focusOnSelect: true
+    });
+
+    $jq('a[data-slide]').click(function(e) {
+      e.preventDefault();
+      var slideno = $jq(this).data('slide');
+      $jq('.slider-nav').slick('slickGoTo', slideno - 1);
+    });
+  }
+
+  else {
+    var $jq = jQuery.noConflict();
+    $jq('.slider-for').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.slider-nav'
+    });
+
+    $jq('.slider-nav').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      asNavFor: '.slider-for',
+      dots: true,
+      focusOnSelect: true
+    });
+
+    $jq('a[data-slide]').click(function(e) {
+      e.preventDefault();
+      var slideno = $jq(this).data('slide');
+      $jq('.slider-nav').slick('slickGoTo', slideno - 1);
+    });
+  }
+</script>
