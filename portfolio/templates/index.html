@@ -352,33 +352,7 @@
 </html>
 
 <script>
-  if ($(window).width() <= 768) {
-    var $jq = jQuery.noConflict();
-    $jq('.slider-for').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      fade: true,
-      asNavFor: '.slider-nav'
-    });
-
-    $jq('.slider-nav').slick({
-      slidesToShow: 2,
-      slidesToScroll: 1,
-      asNavFor: '.slider-for',
-      arrows: false,
-      dots: true,
-      focusOnSelect: true
-    });
-
-    $jq('a[data-slide]').click(function(e) {
-      e.preventDefault();
-      var slideno = $jq(this).data('slide');
-      $jq('.slider-nav').slick('slickGoTo', slideno - 1);
-    });
-  }
-
-  else if ($(window).width() <= 992) {
+  if ($(window).width() <= 992) {
     var $jq = jQuery.noConflict();
     $jq('.slider-for').slick({
       slidesToShow: 1,

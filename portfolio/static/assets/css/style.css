@@ -569,14 +569,14 @@ section {
 
   .slider-nav img{
     margin-left: 9px;
-    width: 245px;
-    height: 120px;
+    width: 0px;
+    height: 0px;
   }
 }
 
 @media (max-width: 992px) and (min-width: 769px) {
   .slider-for img {
-    height: 520px;
+    height: 400px;
   }
 
   .slider-nav img{
@@ -611,6 +611,11 @@ section {
 }
 
 @media (max-width: 768px) {
+  .logo:hover {
+    cursor: pointer;
+    transform: none;
+  }
+
   .contact-links {
     display: block;
   }
