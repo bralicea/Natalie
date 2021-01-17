@@ -61,7 +61,7 @@
   <section id="hero" class="d-flex flex-column justify-content-center">
     <div class="container introbox" data-aos="zoom-in" data-aos-delay="100">
       <h1>Natalie Riolfi</h1>
-      <p><span class="typed" data-typed-items="Artist, Cartoonist, Painter"></span></p>
+      <p><span class="typed" data-typed-items="{{ typer.words }}"></span></p>
       <div class="social-links">
         <a href="https://www.instagram.com/mavrxia/" class="instagram"><i class="bx bxl-instagram"></i></a>
         <a href="mailto:mavrxia@gmail.com" class="linkedin"><i class="bx bx-envelope"></i></a>
@@ -72,6 +72,7 @@
   <main id="main">
 
     <!-- ======= Portfolio Section ======= -->
+
     <section id="portfolio" class="portfolio section-bg">
       <div class="container" data-aos="fade-up">
 
@@ -83,156 +84,26 @@
           <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-painting">Painting</li>
-              <li data-filter=".filter-woodcarving">Wood Carving</li>
-              <li data-filter=".filter-sketch">Sketch</li>
+              {% for category in imagecategories %}
+                <li data-filter=".filter-{{ category.category }}">{{ category.category }}</li>
+              {% endfor %}
             </ul>
           </div>
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-lg-4 col-md-6 portfolio-item filter-sketch">
-            <div class="portfolio-wrap">
-              <img src="{% static 'assets/img/portfolio/IMG-3663.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <div class="portfolio-links">
-                  <a href="{% static 'assets/img/portfolio/IMG-3663.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
+        {% for image in portfolioimages %}
+            <div class="col-lg-4 col-md-6 portfolio-item filter-{{ image.category }}">
+              <div class="portfolio-wrap">
+                <img src="{{ image.image.url }}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <div class="portfolio-links">
+                    <a href="{{ image.image.url }}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-painting">
-            <div class="portfolio-wrap">
-              <img src="{% static 'assets/img/portfolio/In_a_Week.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <div class="portfolio-links">
-                  <a href="{% static 'assets/img/portfolio/In_a_Week.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-woodcarving">
-            <div class="portfolio-wrap">
-              <img src="{% static 'assets/img/portfolio/Wood_Carving_Series.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <div class="portfolio-links">
-                  <a href="{% static 'assets/img/portfolio/Wood_Carving_Series.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-woodcarving">
-            <div class="portfolio-wrap">
-              <img src="{% static 'assets/img/portfolio/wood_environment_no.1.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <div class="portfolio-links">
-                  <a href="{% static 'assets/img/portfolio/wood_environment_no.1.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-woodcarving">
-            <div class="portfolio-wrap">
-              <img src="{% static 'assets/img/portfolio/wood_environment_no.2.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <div class="portfolio-links">
-                  <a href="{% static 'assets/img/portfolio/wood_environment_no.2.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-painting">
-            <div class="portfolio-wrap">
-              <img src="{% static 'assets/img/portfolio/Edge_of_the_World_at_Salar_de_Uyuni.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <div class="portfolio-links">
-                  <a href="{% static 'assets/img/portfolio/Edge_of_the_World_at_Salar_de_Uyuni.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-painting">
-            <div class="portfolio-wrap">
-              <img src="{% static 'assets/img/portfolio/IMG-3664.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <div class="portfolio-links">
-                  <a href="{% static 'assets/img/portfolio/IMG-3664.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-sketch">
-            <div class="portfolio-wrap">
-              <img src="{% static 'assets/img/portfolio/IMG-4087.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <div class="portfolio-links">
-                  <a href="{% static 'assets/img/portfolio/IMG-4087.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-sketch">
-            <div class="portfolio-wrap">
-              <img src="{% static 'assets/img/portfolio/IMG-4088.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <div class="portfolio-links">
-                  <a href="{% static 'assets/img/portfolio/IMG-4088.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-sketch">
-            <div class="portfolio-wrap">
-              <img src="{% static 'assets/img/portfolio/IMG-4089.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <div class="portfolio-links">
-                  <a href="{% static 'assets/img/portfolio/IMG-4089.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-sketch">
-            <div class="portfolio-wrap">
-              <img src="{% static 'assets/img/portfolio/IMG-4091.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <div class="portfolio-links">
-                  <a href="{% static 'assets/img/portfolio/IMG-4091.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-sketch">
-            <div class="portfolio-wrap">
-              <img src="{% static 'assets/img/portfolio/IMG-4093.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <div class="portfolio-links">
-                  <a href="{% static 'assets/img/portfolio/IMG-4093.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-sketch">
-            <div class="portfolio-wrap">
-              <img src="{% static 'assets/img/portfolio/IMG-4102.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <div class="portfolio-links">
-                  <a href="{% static 'assets/img/portfolio/IMG-4102.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
+        {% endfor %}
 
         </div>
 
@@ -246,38 +117,14 @@
         </div>
         <div class="main">
           <div class="slider slider-for">
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4050.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4056.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4060.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4061.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4063.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4046.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4047.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4048.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4080.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4083.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4084.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4085.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4086.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4087.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4088.jpg' %}"></img></div>
+            {% for image in sketchbookimages %}
+              <div><img src="{{ image.image.url }}"></img></div>
+            {% endfor %}
           </div>
           <div class="slider slider-nav">
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4050.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4056.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4060.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4061.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4063.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4046.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4047.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4048.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4080.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4083.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4084.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4085.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4086.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4087.jpg' %}"></img></div>
-            <div><img src="{% static 'assets/img/sketchbook/IMG-4088.jpg' %}"></img></div>
+            {% for image in sketchbookimages %}
+              <div><img src="{{ image.image.url }}"></img></div>
+            {% endfor %}
           </div>
         </div>
       </div>
@@ -334,7 +181,6 @@
   <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
   <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
   <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
   <script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
   <script src="{% static 'assets/vendor/counterup/counterup.min.js' %}"></script>
   <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
@@ -354,6 +200,7 @@
 <script>
   if ($(window).width() <= 992) {
     var $jq = jQuery.noConflict();
+
     $jq('.slider-for').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -385,7 +232,7 @@
       slidesToScroll: 1,
       arrows: false,
       fade: true,
-      asNavFor: '.slider-nav'
+      asNavFor: '.slider-nav',
     });
 
     $jq('.slider-nav').slick({
@@ -400,6 +247,7 @@
       e.preventDefault();
       var slideno = $jq(this).data('slide');
       $jq('.slider-nav').slick('slickGoTo', slideno - 1);
+      $jq('.slider-nav').slick('slickCurrentSlide', slideno - 1);
     });
   }
 </script>

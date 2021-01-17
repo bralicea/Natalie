@@ -260,6 +260,12 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+@media screen and (max-width: 992px) {
+    #hero {
+        background-attachment: scroll;
+    }
+}
+
 @media (min-width: 992px) {
   #hero {
     padding-left: 160px;
@@ -577,7 +583,7 @@ section {
   }
 }
 
-@media (max-width: 992px) and (min-width: 769px) {
+@media (max-width: 992px) and (min-width: 768px) {
   .slider-for img {
     height: 400px;
   }
